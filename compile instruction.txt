@@ -1,0 +1,32 @@
+Compile instructions for the WebServicesBinaryTransferExample
+		Written by www.codejava.net
+==============================================================
+
+- Change directory to src directory:
+	
+	cd src
+	
+- Compile web service:
+	
+	javac net\codejava\ws\binary\server\FileTransfererImpl.java
+
+- Compile server code:
+
+	javac net\codejava\ws\binary\server\WebServiceServer.java
+
+- Start the server:
+	
+	java net.codejava.ws.binary.server.WebServiceServer
+
+- Open new command prompt, change directory to src directory. Type:
+
+	wsimport -keep -p net.codejava.ws.binary.client http://localhost:9898/codejava/fileService?wsdl
+
+- Compile client code:
+	
+	javac net\codejava\ws\binary\client\WebServiceClient.java
+	
+- Run the client:
+	
+	java net.codejava.ws.binary.client.WebServiceClient
+
